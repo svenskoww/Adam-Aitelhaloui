@@ -1,0 +1,21 @@
+def find_max_min():
+    numbers = []
+    while True:
+        try:
+            number = input("entrer un numero ou fin pour terminer ")
+            if number.lower() == 'fin':
+                break
+            else:
+                numbers.append(float(number))
+        except ValueError:
+            print("entrer un numero ou fin pour terminer")
+
+    if numbers:
+        max_number = max(numbers)
+        min_number = min(numbers)
+        print(f"numero max: {max_number}")
+        print(f"numero min: {min_number}")
+    else:
+        print("aucun numero n'a ete entrer")
+
+find_max_min()
